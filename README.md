@@ -1,29 +1,16 @@
-# Prueba Técnica 2 - Asistente Legal con IA
+# Pruebas Técnicas - Consultoría Analítica & Legal
 
-## Descripción
-Sistema RAG (Retrieval-Augmented Generation) para consulta de sentencias 
-de la Corte Constitucional colombiana.
+Este repositorio contiene las soluciones para dos pruebas técnicas:
 
-## Datos procesados
-- 329 sentencias cargadas desde `sentencias_pasadas.xlsx`
-- Base de datos vectorial ChromaDB persistente
-- Modelo de embeddings: all-MiniLM-L6-v2
+## Prueba Técnica 1: Estimación de Costos
+**[Ver Informe Técnico Completo](PruebaTecnicaDK1/informe_tecnico.md)**
+- Modelo predictivo para costos de mantenimiento
+- Análisis exploratorio, feature engineering, random forest
+- Resultados y visualizaciones
 
-## Funcionalidades implementadas
-- Búsqueda semántica con umbral de similitud 0.50
-- Memoria conversacional inteligente
-- Acceso directo por ID (optimizado)
+## Prueba Técnica 2: Asistente Legal con IA
+**[Ver Informe Técnico Completo](PruebaTecnicaDK2/informe_tecnico.md)**
+- Sistema RAG con 329 sentencias de la Corte Constitucional
+- Búsqueda semántica con embeddings y ChromaDB
+- Memoria conversacional con umbral 0.50
 - Detección de PIAR en texto completo
-- Respuestas en lenguaje coloquial
-
-## Resultados obtenidos
-| Pregunta | Casos encontrados                   |
-|----------|-------------------------------------|
-| Redes sociales | T-394/24, T-063/24            |
-| Acoso escolar  | T-249/24                      |
-| PIAR           | T-249/24 (detección en texto) |
-
-## Instalación y ejecución
-```bash
-pip install pandas openpyxl sentence-transformers chromadb scikit-learn
-python codigo_final.py
